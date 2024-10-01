@@ -3,7 +3,6 @@ import Layout from '~/layouts/PageLayout.astro';
 
 import Hero from '~/components/widgets/Hero.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
-
 import Features2 from '~/components/widgets/Features2.astro';
 import Features from '~/components/widgets/Features.astro';
 import Stats from '~/components/widgets/Stats.astro';
@@ -22,31 +21,31 @@ const metadata = {
   <!-- Hero Widget ******************* -->
 
   <Hero
-    tagline="Startup Web Demo"
+    tagline="Clean Reviews Demo"
     actions={[
       {
         variant: 'primary',
         target: '_blank',
-        text: 'Get templates',
-        href: 'https://github.com/onwidget/astrowind',
-        icon: 'tabler:download',
+        text: 'Get Started',
+        href: 'https://your-reputation-site.com/start',
+        icon: 'tabler:rocket',
       },
       { text: 'Learn more', href: '#features' },
     ]}
   >
     <Fragment slot="title">
-      Improve <span class="hidden sm:inline">the online presence of</span> your <span
-        class="text-accent dark:text-white highlight">Startup</span
-      > with Astrowind templates
+      Enhance <span class="hidden sm:inline">and maintain</span> your <span
+        class="text-accent dark:text-white highlight">online reputation</span
+      > with Clean Reviews
     </Fragment>
 
     <Fragment slot="subtitle">
-      Step into the spotlight with <span class="font-semibold">Astrowind</span> templates, your pathway to fortifying your
-      startup's digital footprint, fostering credibility, and expanding your reach.
+      Strengthen your digital presence with <span class="font-semibold">Clean Reviews</span>, a comprehensive solution to manage
+      customer feedback, improve your brand’s credibility, and foster trust in your business.
     </Fragment>
 
     <Fragment slot="image">
-      <YouTube id="gxBkghlglTg" title="Astro just Launched.... Could it be the ultimate web framework?" />
+      <YouTube id="clean_reviews_demo" title="Clean Reviews: Boost Your Online Reputation" />
       <style is:inline>
         lite-youtube {
           margin: 0 auto;
@@ -59,32 +58,32 @@ const metadata = {
   <!-- Features2 Widget ************** -->
 
   <Features2
-    title="About us"
-    subtitle="We believe in the magic of turning dreams into stunning realities. Founded by passionate developers with a shared vision, we set out to simplify the website creation process. Our templates bring together the innovation of Astro 4.0 and the versatility of Tailwind CSS, enabling you to express your unique brand identity like never before."
+    title="Who We Are"
+    subtitle="At Clean Reviews, we believe in empowering businesses by helping them manage their online reviews with transparency and integrity. Our goal is to simplify the review management process while ensuring that your business thrives online with honest feedback."
   >
     <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+      <div class="absolute inset-0 bg-green-50 dark:bg-transparent"></div>
     </Fragment>
   </Features2>
 
   <!-- Stats Widget ****************** -->
 
   <Stats
-    title="Discover the impressive impact of Astrowind"
-    subtitle="The numbers below reflect the trust our users have placed in us and the remarkable outcomes we've helped them achieve."
+    title="See the Difference Clean Reviews Makes"
+    subtitle="Our platform has helped thousands of businesses improve their online reputation and increase customer trust."
     stats={[
-      { title: 'Downloads', amount: '182K' },
-      { title: 'Websites Launched', amount: '87' },
-      { title: 'User Ratings', amount: '4.8' },
-      { title: 'Satisfied Clients', amount: '116K' },
+      { title: 'Reviews Managed', amount: '200K' },
+      { title: 'Positive Rating Increase', amount: '45%' },
+      { title: 'Businesses Helped', amount: '15K' },
+      { title: 'Satisfied Clients', amount: '98%' },
     ]}
   />
 
   <!-- Brands Widget ****************** -->
 
   <Brands
-    title="Partnerships & Collaborations"
-    subtitle="At Astrowind, we believe in the power of collaboration to drive innovation and create exceptional experiences."
+    title="Trusted by Leading Companies"
+    subtitle="We collaborate with businesses of all sizes to help them manage their online reputation effectively."
     icons={[]}
     images={[
       {
@@ -99,26 +98,9 @@ const metadata = {
         src: 'https://cdn.pixabay.com/photo/2013/10/01/10/29/ebay-189064_1280.png',
         alt: 'Ebay',
       },
-
       {
         src: 'https://cdn.pixabay.com/photo/2015/04/13/17/45/icon-720944_1280.png',
         alt: 'Youtube',
-      },
-      {
-        src: 'https://cdn.pixabay.com/photo/2013/02/12/09/07/microsoft-80658_1280.png',
-        alt: 'Microsoft',
-      },
-      {
-        src: 'https://cdn.pixabay.com/photo/2015/04/23/17/41/node-js-736399_1280.png',
-        alt: 'Node JS',
-      },
-      {
-        src: 'https://cdn.pixabay.com/photo/2015/10/31/12/54/google-1015751_1280.png',
-        alt: 'Google',
-      },
-      {
-        src: 'https://cdn.pixabay.com/photo/2021/12/06/13/45/meta-6850393_1280.png',
-        alt: 'Meta',
       },
       {
         src: 'https://cdn.pixabay.com/photo/2013/01/29/22/53/yahoo-76684_1280.png',
@@ -130,31 +112,29 @@ const metadata = {
   <!-- Features2 Widget ************** -->
 
   <Features2
-    title="What services do we provide?"
-    subtitle="We offer a wide range of website templates that suit various industries and purposes such as business, portfolio, e-commerce, blog, etc."
+    title="Our Services"
+    subtitle="We offer powerful tools and services designed to make review management effortless."
     items={[
       {
-        title: 'Installation Instructions',
-        description:
-          'Offer clear instructions on how to download the purchased templates and install them on various website platforms or content management systems.',
-        icon: 'flat-color-icons:document',
+        title: 'Review Aggregation',
+        description: 'Consolidate customer feedback from multiple platforms into one easy-to-manage dashboard.',
+        icon: 'tabler:chart-line',
       },
       {
-        title: 'Demo and Previews',
+        title: 'Real-time Notifications',
         description:
-          'Provide interactive demos and previews that allow customers to see how their chosen template will look and function before making a purchase.',
-        icon: 'flat-color-icons:template',
+          'Receive instant updates whenever a new review is posted, allowing you to respond promptly.',
+        icon: 'tabler:clock',
       },
       {
-        title: 'Technical Support',
-        description:
-          'Providing customer support for any technical issues related to the templates or their implementation.',
-        icon: 'flat-color-icons:voice-presentation',
+        title: 'Sentiment Analysis',
+        description: 'Analyze the sentiment behind reviews to gauge how your customers truly feel about your brand.',
+        icon: 'tabler:heart',
       },
     ]}
   >
     <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+      <div class="absolute inset-0 bg-green-50 dark:bg-transparent"></div>
     </Fragment>
   </Features2>
 
@@ -162,42 +142,36 @@ const metadata = {
 
   <Features
     id="features"
-    title="Main features of our templates"
-    subtitle="Possess several key characteristics to effectively cater to the needs of startups and entrepreneurs."
+    title="Key Features of Clean Reviews"
+    subtitle="Our platform is packed with features that help you take control of your online reputation."
     columns={3}
     items={[
       {
-        title: 'Modern and Professional Design',
+        title: 'Comprehensive Review Dashboard',
         description:
-          'Have a contemporary design that reflects current design trends and gives a professional impression.',
-        icon: 'tabler:artboard',
+          'Monitor and manage reviews from all major platforms in one centralized location.',
+        icon: 'tabler:dashboard',
       },
       {
-        title: 'Responsive and Mobile-Friendly',
-        description: 'Adapt seamlessly to different screen sizes and devices to ensure a consistent experience.',
-        icon: 'tabler:picture-in-picture',
+        title: 'Automated Responses',
+        description: 'Set up automated replies to quickly respond to customer feedback.',
+        icon: 'tabler:message-circle',
       },
       {
-        title: 'Customizability',
+        title: 'Customizable Reporting',
         description:
-          'Easily customizable, allowing users to adapt the design, colors, typography, and content to match their brand identity.',
-        icon: 'tabler:adjustments-horizontal',
+          'Generate reports that provide insights into customer sentiment and the impact of reviews on your business.',
+        icon: 'tabler:report-analytics',
       },
       {
-        title: 'Fast Loading Times',
-        description: 'Optimized for speed to ensure a smooth user experience and favorable search engine rankings.',
-        icon: 'tabler:rocket',
+        title: 'Reputation Monitoring',
+        description: 'Keep track of your overall online reputation and make data-driven decisions to improve it.',
+        icon: 'tabler:eye',
       },
       {
-        title: 'Search Engine Optimization (SEO)',
-        description:
-          'Incorporate SEO best practices in template structure and code to improve visibility in search engine results.',
-        icon: 'tabler:arrows-right-left',
-      },
-      {
-        title: 'Compatibility',
-        description: 'The templates work seamlessly across various content management systems and website builders.',
-        icon: 'tabler:plug-connected',
+        title: 'Review Widgets for Your Website',
+        description: 'Showcase positive reviews on your website with customizable widgets.',
+        icon: 'tabler:stars',
       },
     ]}
   />
@@ -208,47 +182,47 @@ const metadata = {
     title="Frequently Asked Questions"
     items={[
       {
-        title: 'What are landing page templates?',
+        title: 'Why are online reviews important?',
         description:
-          'Landing page templates are pre-designed web page layouts that are specifically created to serve as a foundation for building effective landing pages. These templates are designed to capture the attention of visitors and guide them towards a specific action or goal, such as signing up for a newsletter, making a purchase, or downloading a resource.',
+          'Online reviews are crucial because they influence potential customers decisions, build trust, and enhance your brand’s credibility.',
       },
       {
-        title: 'Why should I use a template?',
+        title: 'How does Clean Reviews help me manage reviews?',
         description:
-          'Some of the advantages are that they provide a ready-to-use structure,  saving you significant time. Are designed with user-friendliness in mind and provide a cost-effective alternative, saving you money while still delivering a quality result.',
+          'Clean Reviews provides a centralized platform to view, respond to, and analyze feedback across various review sites.',
       },
       {
-        title: 'Can I preview templates before buying?',
+        title: 'Can I filter reviews based on rating?',
         description:
-          'Yes, the templates allow you to preview them before making a purchase. There is a "Demo" button associated with each template.',
+          'Yes, Clean Reviews allows you to filter reviews by rating, date, or platform, making it easier to prioritize feedback.',
       },
       {
-        title: 'Do I need technical skills to use a template?',
+        title: 'Does Clean Reviews offer analytics?',
         description:
-          'Advanced technical skills are not required to use a template, but having a basic understanding of web navigation and familiarity with using online tools can still be beneficial. If you have more specific customization needs, you might need to consult guides or reach out to customer support for assistance.',
+          'Yes, our platform provides in-depth analytics on your reviews, including trends, customer sentiment, and areas for improvement.',
       },
       {
-        title: 'Can I use the template on multiple websites?',
+        title: 'Is there a mobile app for Clean Reviews?',
         description:
-          'No, the template comes with a single-use license, meaning you can use the template on one website or project only. Using the template on additional websites would require purchasing additional licenses.',
+          'Yes, we offer a mobile app that lets you manage your reviews on the go, ensuring you never miss important feedback.',
       },
       {
-        title: 'What if I need help with customization?',
+        title: 'What platforms does Clean Reviews support?',
         description:
-          "The templates provides a comprehensive step-by-step guide that walk you through the customization process. If you still have doubts, you can reach out to our customer support team. They can answer your questions, provide guidance on customization, and address any issues you're facing.",
+          'We support all major review platforms, including Google, Yelp, Facebook, and more.',
       },
     ]}
   >
     <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+      <div class="absolute inset-0 bg-green-50 dark:bg-transparent"></div>
     </Fragment>
   </FAQs>
 
   <!-- Features3 Widget ************** -->
 
   <Features3
-    title="Let us know how we can help"
-    subtitle="We’re here to help and answer any question you might have."
+    title="Get in Touch with Us"
+    subtitle="Have any questions or need assistance? We're here to help you manage your online reputation."
     columns={4}
     items={[
       {
@@ -257,7 +231,7 @@ const metadata = {
         callToAction: {
           target: '_blank',
           text: 'Call us',
-          href: '/',
+          href: 'tel:+1234567890',
           variant: 'link',
         },
       },
@@ -267,7 +241,7 @@ const metadata = {
         callToAction: {
           target: '_blank',
           text: 'Write to us',
-          href: '/',
+          href: 'mailto:support@cleanreviews.com',
           variant: 'link',
         },
       },
@@ -277,7 +251,7 @@ const metadata = {
         callToAction: {
           target: '_blank',
           text: 'Start chatting',
-          href: '/',
+          href: '/chat-sales',
           variant: 'link',
         },
       },
@@ -287,7 +261,7 @@ const metadata = {
         callToAction: {
           target: '_blank',
           text: 'Start chatting',
-          href: '/',
+          href: '/chat-support',
           variant: 'link',
         },
       },
@@ -301,17 +275,16 @@ const metadata = {
       {
         variant: 'primary',
         target: '_blank',
-        text: 'Get templates',
-        href: 'https://github.com/onwidget/astrowind',
-        icon: 'tabler:download',
+        text: 'Sign up for Clean Reviews',
+        href: 'https://your-reputation-site.com/signup',
+        icon: 'tabler:rocket',
       },
     ]}
   >
-    <Fragment slot="title">Be a part of our vision</Fragment>
+    <Fragment slot="title">Join Us in Enhancing Your Reputation</Fragment>
 
     <Fragment slot="subtitle">
-      Discover a dynamic work environment, unparalleled growth opportunities, and the chance to make a meaningful
-      impact.
+      Let Clean Reviews help you build trust, enhance your brand, and stand out in a competitive marketplace.
     </Fragment>
   </CallToAction>
 </Layout>

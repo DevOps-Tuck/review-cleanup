@@ -14,10 +14,6 @@ export const headerData = {
           href: getPermalink('/homes/startup'),
         },
         {
-          text: 'Mobile App',
-          href: getPermalink('/homes/mobile-app'),
-        },
-        {
           text: 'Personal',
           href: getPermalink('/homes/personal'),
         },
@@ -60,24 +56,12 @@ export const headerData = {
       text: 'ABOUT',
       links: [
         {
-          text: 'Lead Generation',
-          href: getPermalink('/landing/lead-generation'),
-        },
-        {
-          text: 'Long-form Sales',
-          href: getPermalink('/landing/sales'),
-        },
-        {
           text: 'Click-Through',
           href: getPermalink('/landing/click-through'),
         },
         {
           text: 'Product Details (or Services)',
           href: getPermalink('/landing/product'),
-        },
-        {
-          text: 'Coming Soon or Pre-Launch',
-          href: getPermalink('/landing/pre-launch'),
         },
         {
           text: 'Subscription',

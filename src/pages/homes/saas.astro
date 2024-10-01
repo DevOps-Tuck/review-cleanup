@@ -1,349 +1,142 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
-
-import Header from '~/components/widgets/Header.astro';
+// import Header from '~/components/widgets/Header.astro';
 import Hero2 from '~/components/widgets/Hero2.astro';
 import Features from '~/components/widgets/Features.astro';
-import Steps2 from '~/components/widgets/Steps2.astro';
+// import Steps2 from '~/components/widgets/Steps2.astro';
 import Content from '~/components/widgets/Content.astro';
-import Pricing from '~/components/widgets/Pricing.astro';
-
-import { headerData } from '~/navigation';
+// import Pricing from '~/components/widgets/Pricing.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
-import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
+// import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
+// import { headerData } from '~/navigation';
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const metadata = {
   title: 'SaaS Landing Page',
 };
 ---
-
-<Layout metadata={metadata}>
-  <Fragment slot="header">
-    <Header
-      {...headerData}
-      actions={[
-        {
-          variant: 'secondary',
-          text: 'Login',
-          href: '#',
-        },
-        {
-          variant: 'primary',
-          text: 'Sign Up',
-          href: '#',
-        },
-      ]}
-      isSticky
-    />
-  </Fragment>
-
-  <!-- Hero2 Widget ******************* -->
-
+<Layout>
   <Hero2
-    tagline="SaaS Web Demo"
+    tagline="Customer Reviews Matter!"
     actions={[
-      { variant: 'primary', target: '_blank', text: 'Get Started', href: 'https://github.com/onwidget/astrowind' },
-      { text: 'Learn more', href: '#features' },
+      { variant: 'primary', target: '_blank', text: 'Learn More', href: 'https://bizrateinsights.com' },
+      { text: 'See Stats', href: '#statistics' },
     ]}
     image={{
       src: 'https://images.unsplash.com/photo-1580481072645-022f9a6dbf27?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-      alt: 'AstroWind Hero Image',
+      alt: 'Customer Review Impact Image',
     }}
   >
     <Fragment slot="title">
-      Simplify web design with Astrowind: <br /> your ultimate <span class="text-accent dark:text-white highlight"
-        >SaaS</span
-      > companion<br />
+      How Important Are <span class="text-accent dark:text-white highlight">Customer Reviews</span> for Your Business?
     </Fragment>
-
     <Fragment slot="subtitle">
-      <span class="hidden sm:inline">
-        Elevate your website creation process with <span class="font-semibold">AstroWind</span>'s SaaS solutions.</span
-      >
-      Seamlessly blend the power of Astro 4.0 and Tailwind CSS to craft websites that resonate with your brand and audience.
+      93% of Internet users claim that reading a review has impacted their buying habits.
     </Fragment>
   </Hero2>
 
-  <!-- Features Widget *************** -->
-
+  <!-- Key Stats and Features *************** -->
   <Features
-    id="features"
-    title="Why choose AstroWind?"
-    subtitle="Each of the following features enhances AstroWind's value proposition."
+    id="statistics"
+    title="Key Insights on Customer Reviews"
+    subtitle="Statistics show the undeniable impact of customer reviews on purchasing decisions."
     columns={2}
     items={[
       {
-        title: 'Integration of Astro 4.0 and Tailwind CSS',
+        title: '1.5X Impact',
+        description: 'Customers are 1.5X more likely to be influenced by a review than a discount offer.',
+        icon: 'tabler:trending-up',
+      },
+      {
+        title: 'Importance of Reviews',
         description:
-          'Offers a powerful combination that enhances both the development process and the end-user experience. Also, allows to build dynamic and visually stunning websites with optimized performance.',
-        icon: 'tabler:layers-union',
+          'Over 25% of consumers trust a rating only if it has 11-50 reviews, while 19% expect between 51 and 100.',
+        icon: 'tabler:users',
       },
       {
-        title: 'Versatile design for startups, small businesses, and more',
-        description: `Easily customize AstroWind to harmonize with the unique branding and identity of your venture. AstroWind's versatile design adapts to suit your needs.`,
-        icon: 'tabler:artboard',
-      },
-      {
-        title: 'Effortless customization for portfolios and marketing sites',
+        title: 'Fast Response Expected',
         description:
-          'With intuitive customization, easily showcase portfolio pieces, case studies, project highlights, and relevant content. Ideal for creative professionals and businesses looking to highlight their expertise.',
-        icon: 'tabler:writing',
+          '53% of customers expect businesses to respond to negative reviews within a week, with 1 in 3 expecting a response in 3 days or less.',
+        icon: 'tabler:clock',
       },
       {
-        title: 'Optimized landing pages and engaging blogs',
-        description: `Landing pages are strategically designed to captivate visitors and prompt specific actions. Additionally, the blog creation feature empowers sharing insights, engaging the audience.`,
-        icon: 'tabler:podium',
+        title: 'Negative Reviews Cost',
+        description:
+          '86% of users think twice before purchasing from a company with bad reviews, and 92% only engage with businesses with 4-star ratings or higher.',
+        icon: 'tabler:thumb-down',
       },
       {
-        title: 'Fast loading times and production-ready code',
-        description: `Using Astro 4.0 ensures fast loading and seamless rendering, enhancing browsing. The code follows best practices, improving user experience, SEO, and reducing bounce rates.`,
-        icon: 'tabler:rocket',
+        title: 'Google Dominates Reviews',
+        description:
+          '73% of all online reviews are hosted by Google, far more than competitors like Yelp (6%) and Facebook (3%).',
+        icon: 'tabler:brand-google',
       },
       {
-        title: 'SEO-optimized structure for enhanced visibility',
-        description: `Follows SEO best practices with clean code, semantic HTML markup, and fast loading, enhancing search engine rankings. AstroWind's SEO structure ensures visibility to potential customers and clients.`,
-        icon: 'tabler:eyeglass',
+        title: '31% More Spending',
+        description:
+          'Customers are likely to spend 31% more on businesses with “excellent” reviews, and negative reviews can lead to losing up to 30 customers.',
+        icon: 'tabler:cash',
       },
     ]}
   />
 
-  <!-- Content Widget **************** -->
-
+  <!-- Detailed Insights on Reviews *************** -->
   <Content
-    title="Use cases"
-    subtitle="Discover how AstroWind's versatile template serves as the ideal solution for various use cases, providing tailored solutions to drive success."
-    isReversed
-    items={[
-      {
-        title: 'Description:',
-        description:
-          'Are you a startup with big dreams? AstroWind propels your success. Our template forges a seamless online presence, attracting investors and customers from day one. Astro 4.0 and Tailwind CSS ensure striking, responsive sites, leaving lasting impressions. Countless startups leverage AstroWind to kickstart their journey and resonate with audiences.',
-      },
-      {
-        title: 'Benefits:',
-        description: `Allow startups to quickly create professional websites without investing extensive time and resources. <br /> Make a memorable first impression with visually appealing design elements that highlight your startup's unique value proposition. <br /> Ensures your website looks stunning and works well on all devices. <br /> Engage potential investors and customers with engaging content, clear messaging, and intuitive navigation.`,
-      },
-    ]}
+    title="How Many Reviews Do You Need?"
+    subtitle="Understanding the number of reviews required for building consumer trust."
     image={{
-      src: 'https://images.unsplash.com/photo-1620558138198-cfb9b4f3c294?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1671&q=80',
-      alt: 'Startup Image',
+      src: 'https://images.unsplash.com/photo-1555529669-833515eb5a81?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1658&q=80',
+      alt: 'Customer Trust Image',
     }}
   >
     <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        Startup success stories: <br /><span class="text-2xl">Launching with AstroWind</span>
-      </h3>
-    </Fragment>
-
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+      <p>Based on recent surveys, consumers need to see a certain number of reviews before they trust them:</p>
+      <ul class="list-disc ml-4">
+        <li>Over 25% of consumers only trust a rating if it has between 11 and 50 reviews.</li>
+        <li>19% of shoppers expect between 51 and 100 reviews before forming a strong opinion.</li>
+      </ul>
     </Fragment>
   </Content>
 
-  <!-- Content Widget **************** -->
-
-  <Content
-    isAfterContent={true}
-    items={[
-      {
-        title: 'Description:',
-        description: `For SaaS businesses, user experience is key. AstroWind enhances showcasing SaaS solutions intuitively. The template's Astro 4.0 and Tailwind CSS integration guarantees user-friendly experience, mirroring your software's efficiency. Customize pages to communicate SaaS value and solutions for your audience.`,
-      },
-      {
-        title: 'Benefits:',
-        description: `Ensuring a cohesive and user-centric design for your SaaS website. <br /> Effectively communicate complex SaaS features through visual aids, animations, and interactive elements. <br /> Prioritize user needs and pain points through well-structured layouts and clear navigation. <br /> Encourage visitors to take action with strategically placed CTAs. <br /> Ensures your SaaS website works seamlessly across all devices.`,
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1531973486364-5fa64260d75b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1658&q=80',
-      alt: 'SaaS Businesses Image',
-    }}
-  >
-    <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        SaaS showcase: <br /><span class="text-2xl">Streamlining user experience</span>
-      </h3>
-    </Fragment>
-
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Content>
-
-  <!-- Content Widget **************** -->
-
+  <!-- Fast Response Importance *************** -->
   <Content
     isReversed
-    isAfterContent={true}
-    items={[
-      {
-        title: 'Description:',
-        description: `Your portfolio is your masterpiece, and AstroWind is your canvas. Whether you're a designer, photographer, artist, or any other creative professional, AstroWind empowers you to showcase your work with elegance and sophistication. Tailored to highlight your creative projects, AstroWind's templates offer a visually immersive experience that lets your portfolio shine.`,
-      },
-      {
-        title: 'Benefits:',
-        description: `Serve as a captivating backdrop to showcase your creative work, capturing attention and leaving a lasting impression. <br /> Tailor your portfolio to reflect your unique style and artistic vision. <br /> Prioritizes visuals, allowing you to present your work in high-resolution detail that draws viewers into your creations. <br /> Enables seamless navigation for effortless portfolio exploration.`,
-      },
-    ]}
+    title="Fast Responses to Negative Reviews Are Critical"
+    subtitle="What do consumers expect when businesses face negative reviews?"
     image={{
-      src: 'https://images.unsplash.com/photo-1635070041078-e363dbe005cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-      alt: 'Portfolio Image',
+      src: 'https://images.unsplash.com/photo-1533025783063-c07f58d5a94d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1658&q=80',
+      alt: 'Respond to Negative Reviews Image',
     }}
   >
     <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        Creative portfolios: <br /><span class="text-2xl">Highlighting your work</span>
-      </h3>
-    </Fragment>
-
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Content>
-
-  <!-- Content Widget **************** -->
-
-  <Content
-    items={[
-      {
-        title: 'Description:',
-        description: `For small businesses, a well-crafted website can be a game-changer. AstroWind empowers small businesses to not only establish a credible online presence but also convert visitors into loyal customers. The template's thoughtful design and optimization features ensure that your website doesn't just attract attention but also guides visitors through a seamless journey, ultimately leading to conversions.`,
-      },
-      {
-        title: 'Benefits:',
-        description: `Present your small business with a professional and polished website that instills confidence and trust among visitors. <br /> Strategically placed CTAs, user-friendly forms, and optimized layouts work together to drive user engagement and conversions. <br /> Ensure a smooth browsing experience, reducing bounce rates and encouraging interaction.`,
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1514621166532-aa7eb1a3a2f4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
-      alt: 'Small Business Image',
-    }}
-  >
-    <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        Small business growth: <br /><span class="text-2xl">Converting visitors into customers</span>
-      </h3>
-    </Fragment>
-
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+      <p>
+        Consumers expect businesses to respond quickly to negative reviews. According to ReviewTrackers:
+      </p>
+      <ul class="list-disc ml-4">
+        <li>53% of customers expect a response within a week, while 1 in 3 expects it within 3 days or less.</li>
+        <li>63% say at least one company they reviewed never responded to their feedback.</li>
+        <li>Customers lose trust when businesses don’t act on feedback promptly.</li>
+      </ul>
     </Fragment>
   </Content>
 
-  <!-- Pricing Widget ******************* -->
-
-  <Pricing
-    title="Flexible pricing plans"
-    prices={[
-      {
-        title: 'free',
-        subtitle: 'Access to core features and a wide range of templates',
-        price: '0',
-        period: '/ month',
-        callToAction: {
-          target: '_blank',
-          text: 'Get Started for Free',
-          href: '#',
-        },
-      },
-      {
-        title: 'pro',
-        subtitle: 'Premium templates and advanced customization',
-        price: 15,
-        period: '/ Month',
-        callToAction: {
-          target: '_blank',
-          text: 'Upgrade to Pro',
-          href: '#',
-        },
-        hasRibbon: true,
-        ribbonTitle: 'popular',
-      },
-      {
-        title: 'Enterprise',
-        subtitle: 'Tailored solutions for large-scale projects',
-        price: 45,
-        period: '/ Month',
-        callToAction: {
-          target: '_blank',
-          text: 'Unlock Enterprise Features',
-          href: '#',
-        },
-      },
-    ]}
-  />
-
-  <!-- FAQs Widget ******************* -->
-
+  <!-- FAQs on Customer Reviews *************** -->
   <FAQs
     title="Frequently Asked Questions"
-    items={[
+    subtitle="Common questions about the importance and impact of customer reviews."
+    faqs={[
       {
-        title: 'Is AstroWind compatible with the latest versions of Astro and Tailwind CSS?',
-        description:
-          'Yes, AstroWind is designed to be compatible with the latest versions of both Astro and Tailwind CSS. This ensures that you can harness the full capabilities of these technologies while benefiting from the features offered by AstroWind.',
-        icon: 'tabler:chevrons-right',
+        question: 'How important are reviews compared to other factors like discounts?',
+        answer: 'Reviews are 1.5X more likely to influence customers than a discount offer, highlighting their critical role in decision-making.',
       },
       {
-        title: 'Can I use AstroWind for both personal and commercial projects?',
-        description: `Certainly! AstroWind is versatile and can be used for a wide range of projects, including both personal and commercial endeavors. Whether you're building a professional portfolio, launching a startup, or creating a marketing website, AstroWind has you covered.`,
-        icon: 'tabler:chevrons-right',
+        question: 'What happens if my business has less than a 4-star rating?',
+        answer: 'Most consumers apply filters to see only businesses with 4-star ratings or higher, so falling below that threshold could significantly impact your visibility and customer trust.',
       },
       {
-        title: 'What level of coding knowledge is required to use AstroWind?',
-        description:
-          'While some familiarity with HTML, CSS, and web development concepts is helpful, the user-friendly interface and customization options allow those with limited coding experience to create impressive websites. For more advanced users, AstroWind offers extensive customization capabilities.',
-        icon: 'tabler:chevrons-right',
-      },
-      {
-        title: 'Is customer support available for AstroWind users seeking guidance?',
-        description: `Absolutely, our dedicated customer support team is here to assist you with any questions or challenges you may encounter. Feel free to reach out to us through our support channels, and we'll be happy to provide the help you need.`,
-        icon: 'tabler:chevrons-right',
-      },
-    ]}
-  >
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </FAQs>
-
-  <!-- Steps2 Widget ****************** -->
-
-  <Steps2
-    title="Reach out to us"
-    subtitle="Have questions? Feel free to contact us using the form below. We're here to help!"
-    callToAction={{
-      text: 'Contact us',
-      href: '/',
-    }}
-    items={[
-      {
-        title: 'Email us',
-        description: 'contact@support.com',
-        icon: 'tabler:mail',
-      },
-      {
-        title: 'Call us',
-        description: '+1 (234) 567-890',
-        icon: 'tabler:headset',
-      },
-      {
-        title: 'Follow us',
-        description: '@example',
-        icon: 'tabler:brand-twitter',
+        question: 'How can negative reviews affect my business?',
+        answer: 'Negative reviews can be costly, potentially leading to a loss of up to 30 customers. It may take up to 12 positive reviews to offset the impact of one negative review.',
       },
     ]}
   />
-
-  <!-- BlogLatestPost Widget **************** -->
-
-  <BlogLatestPosts
-    id="blog"
-    title="Stay informed with AstroWind's blog"
-    information={`Explore our collection of articles, guides, and tutorials on web development, design trends, and using AstroWind effectively for your projects.`}
-  >
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </BlogLatestPosts>
 </Layout>
