@@ -1,6 +1,7 @@
 ---
 import Layout from '~/layouts/LandingLayout.astro';
-
+import Features3 from '~/components/widgets/Features3.astro';
+import Testimonials from '~/components/widgets/Testimonials.astro';
 import Hero from '~/components/widgets/Hero.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 
@@ -13,28 +14,83 @@ const metadata = {
   <!-- Hero2 Widget ******************* -->
 
   <Hero
-    tagline="Product Details Demo"
-    title="Product Landing Page: Showcase with Precision and Passion!"
-    subtitle="Step-by-step guide to designing a Landing Page that highlights every facet of your product or service."
+    tagline="Say Goodbye to Bad Reviews!"
+    title="Transform Your Online Reputation with Our Review-Cleaning Service"
+    subtitle="Tired of bad reviews tarnishing your brand? Our service removes negative reviews, helping you maintain a flawless online reputation. Sign up for our subscription today!"
     actions={[
-      { variant: 'primary', text: 'Call to Action', href: '#', icon: 'tabler:square-rounded-arrow-right' },
-      { text: 'Learn more', href: '#' },
+      { variant: 'primary', text: 'Sign Up Now', href: '#', icon: 'tabler:square-rounded-arrow-right' },
+      { text: 'Learn more', href: '#features' },
     ]}
     image={{
       src: 'https://images.unsplash.com/photo-1473188588951-666fce8e7c68?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2174&q=80',
-      alt: 'A spotlight on a product. Product Details Landing Page Demo',
+      alt: 'Clear and polished online reviews image.',
     }}
   />
 
+  <!-- Features Section ****************** -->
+
+  <Features3
+    id="features"
+    title="Why Choose Our Review-Cleaning Service?"
+    subtitle="Your online reputation is key to attracting and retaining customers. Here’s how we can help you:"
+    columns={3}
+    items={[
+      {
+        title: 'Remove Negative Reviews',
+        description: 'We help you eliminate bad reviews that damage your brand’s image, giving you a clean slate.',
+        icon: 'tabler:trash',
+      },
+      {
+        title: 'Boost Customer Trust',
+        description: 'With no bad reviews in sight, potential customers will have more confidence in your product or service.',
+        icon: 'tabler:thumb-up',
+      },
+      {
+        title: 'Ongoing Monitoring',
+        description: 'Our subscription service ensures your reviews stay spotless with continuous monitoring and removal of negative feedback.',
+        icon: 'tabler:eye',  // Replaced with the "eye" icon, which is commonly associated with monitoring.
+      },
+    ]}
+  />
+
+  <!-- Testimonials Widget *********** -->
+
+  <Testimonials
+    title="What Our Customers Are Saying"
+    subtitle="Our clients love the impact our service has had on their businesses. Here’s what they have to say:"
+    testimonials={[
+      {
+        testimonial: `“Our sales skyrocketed after cleaning up our reviews! This service is worth every penny.”`,
+        name: 'John Doe',
+        job: 'Business Owner',
+        image: {
+          src: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
+          alt: 'John Doe',
+        },
+      },
+      {
+        testimonial: `“This service completely transformed our online reputation. Negative reviews? Gone!”`,
+        name: 'Jane Smith',
+        job: 'CEO',
+        image: {
+          src: 'https://images.unsplash.com/photo-1554151228-14d9def656e4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=772&q=80',
+          alt: 'Jane Smith',
+        },
+      },
+    ]}
+  />
+
+  <!-- CallToAction Widget *********** -->
+
   <CallToAction
-    title="Coming soon"
-    subtitle="We are working on the content of these demo pages. You will see them very soon. Stay tuned Stay tuned!"
+    title="Start Removing Bad Reviews Today"
+    subtitle="Join our growing list of satisfied clients and take control of your online reputation."
     actions={[
       {
         variant: 'primary',
-        text: 'Download Template',
-        href: 'https://github.com/onwidget/astrowind',
-        icon: 'tabler:download',
+        text: 'Subscribe Now',
+        href: '#/subscribe',
+        icon: 'tabler:chevron-right',
       },
     ]}
   />
