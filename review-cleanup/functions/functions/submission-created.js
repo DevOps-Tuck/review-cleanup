@@ -3,18 +3,18 @@ require('dotenv').config();
 
 const fetch = require('node-fetch'); // For making API requests, if needed
 const { EMAIL_TOKEN } = process.env; // Token for external service (if needed)
+const querystring = require('querystring'); // To parse URL-encoded data
 
 const handler = async (event) => {
   try {
-    // Parse the form submission data
-    const formData = JSON.parse(event.body);
+    // Parse the form submission data from URL-encoded format
+    const formData = querystring.parse(event.body);
 
     const { name, email, message } = formData;
 
     console.log(`Received submission: Name: ${name}, Email: ${email}, Message: ${message}`);
 
     // Optionally, send the data to an external service (e.g., Buttondown, email service, etc.)
-    // Example of sending email using Buttondown API (if you need it):
     const response = await fetch('https://api.buttondown.email/v1/subscribers', {
       method: 'POST',
       headers: {

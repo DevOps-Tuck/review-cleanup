@@ -39,7 +39,11 @@ const metadata = {
     label: 'By submitting this contact form, you acknowledge and agree to the collection of your personal information.',
   }}
   description="Our support team typically responds within 24 business hours."
-/>
+  data-netlify="true" // Enable form detection
+>
+  <input type="hidden" name="form-name" value="ContactUs" />  {/* Hidden form name */}
+</ContactUs>
+
 
   <!-- Features2 Widget ************** -->
 
