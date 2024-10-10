@@ -14,36 +14,116 @@ const metadata = {
 
   <HeroText tagline="Contact" title="Let's Connect!" />
 
-  <ContactUs
-  id="form"
-  title="Drop us a message today!"
-  subtitle="For quicker answers, explore our FAQs section. You may find the solution you're looking for right there! If not, our support team is delighted to help you."
-  method="POST" // Keep method as POST
-  data-netlify="true" // Enable Netlify form submission
-  name="ContactUs" // Name of your form
-  inputs={[
-    {
-      type: 'text',
-      name: 'name',
-      label: 'Name',
-    },
-    {
-      type: 'email',
-      name: 'email',
-      label: 'Email',
-    },
-  ]}
-  textarea={{
-    label: 'Message',
-  }}
-  disclaimer={{
-    label: 'By submitting this contact form, you acknowledge and agree to the collection of your personal information.',
-  }}
-  description="Our support team typically responds within 24 business hours."
->
-  <input type="hidden" name="form-name" value="ContactUs" /> {/* Hidden form name */}
-</ContactUs>
+  <form 
+    id="form"
+    name="ContactUs" 
+    method="POST" 
+    data-netlify="true" 
+    data-netlify-honeypot="bot-field" 
+    action="/" // Specify the redirect or thank you page here
+    style={{
+      backgroundColor: '#1b1b28', 
+      padding: '2rem', 
+      borderRadius: '10px',
+      maxWidth: '500px',
+      margin: 'auto',
+      boxShadow: '0px 4px 12px rgba(0, 0, 0, 0.1)',
+      color: '#fff',
+      fontFamily: 'Arial, sans-serif'
+    }}
+  >
+    <input type="hidden" name="form-name" value="ContactUs" /> {/* Hidden form name */}
+    
+    <div style={{ marginBottom: '1.5rem' }}>
+      <label htmlFor="name" style={{ display: 'block', marginBottom: '0.5rem', fontWeight: 'bold' }}>Name</label>
+      <input 
+        type="text" 
+        id="name" 
+        name="name" 
+        required 
+        style={{
+          width: '100%', 
+          padding: '0.75rem', 
+          borderRadius: '5px',
+          border: 'none', 
+          outline: 'none',
+          backgroundColor: '#2e2e3a',
+          color: '#fff'
+        }} 
+      />
+    </div>
+    
+    <div style={{ marginBottom: '1.5rem' }}>
+      <label htmlFor="email" style={{ display: 'block', marginBottom: '0.5rem', fontWeight: 'bold' }}>Email</label>
+      <input 
+        type="email" 
+        id="email" 
+        name="email" 
+        required 
+        style={{
+          width: '100%', 
+          padding: '0.75rem', 
+          borderRadius: '5px',
+          border: 'none', 
+          outline: 'none',
+          backgroundColor: '#2e2e3a',
+          color: '#fff'
+        }} 
+      />
+    </div>
+    
+    <div style={{ marginBottom: '1.5rem' }}>
+      <label htmlFor="message" style={{ display: 'block', marginBottom: '0.5rem', fontWeight: 'bold' }}>Message</label>
+      <textarea 
+        id="message" 
+        name="message" 
+        required 
+        style={{
+          width: '100%', 
+          padding: '0.75rem', 
+          borderRadius: '5px',
+          border: 'none', 
+          outline: 'none',
+          backgroundColor: '#2e2e3a',
+          color: '#fff',
+          minHeight: '150px'
+        }}
+      ></textarea>
+    </div>
+    
+    <p style={{ fontSize: '0.85rem', marginBottom: '1.5rem' }}>
+      <label>
+        <input name="bot-field" type="hidden" />
+      </label>
+    </p> {/* HoneyPot field to prevent spam */}
+    
+    <div style={{ marginBottom: '1.5rem' }}>
+      <input type="checkbox" required /> {/* Checkbox for agreement */}
+      <span style={{ fontSize: '0.85rem', marginLeft: '0.5rem' }}>
+        By submitting this contact form, you acknowledge and agree to the collection of your personal information.
+      </span>
+    </div>
 
+    <button 
+      type="submit" 
+      style={{
+        width: '100%', 
+        padding: '1rem', 
+        backgroundColor: '#007bff', 
+        color: '#fff', 
+        border: 'none', 
+        borderRadius: '5px', 
+        cursor: 'pointer',
+        fontWeight: 'bold'
+      }}
+    >
+      Contact us
+    </button>
+
+    <p style={{ fontSize: '0.85rem', marginTop: '1.5rem', textAlign: 'center' }}>
+      Our support team typically responds within 24 business hours.
+    </p>
+  </form>
 
   <!-- Features2 Widget ************** -->
 
