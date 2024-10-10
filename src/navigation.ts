@@ -50,7 +50,7 @@ export const headerData = {
       ],
     }
   ],
-  actions: [{ text: 'CLICK HERE to get started', href: getPermalink('/pricing'), target: '_blank' }],
+  actions: [{ text: 'REMOVE BAD REVIEWS', href: getPermalink('/pricing'), target: '_blank' }],
 };
 
 export const footerData = {

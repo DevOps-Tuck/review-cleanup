@@ -18,23 +18,21 @@ const metadata = {
   <HeroText
     tagline="Pricing"
     title="Stellar Pricing for Every Journey"
-    subtitle="Choose the perfect plan that aligns with your cosmic goals."
   />
 
   <!-- Pricing Widget ******************* -->
 
   <Prices
     title="Our prices"
-    subtitle="Only pay for what you need"
+    subtitle="Only pay when reviews are removed"
     prices={[
       {
-        title: 'basic',
-        subtitle: 'Optimal choice for personal use',
-        price: 29,
-        period: 'per month',
+        title: 'Tier 1',
+        price: 1499,
+        period: '1 review',
         items: [
           {
-            description: 'Etiam in libero, et volutpat',
+            description: 'Only pay once removed',
           },
           {
             description: 'Aenean ac nunc dolor tristique',
@@ -49,14 +47,15 @@ const metadata = {
         callToAction: {
           target: '_blank',
           text: 'Get started',
-          href: '#',
+          href: '/contact',
         },
+        hasRibbon: false,
+        ribbonTitle: 'popular',
       },
       {
-        title: 'standard',
-        subtitle: 'Optimal choice for small teams',
-        price: 69,
-        period: 'Per Month',
+        title: 'Tier 2',
+        price: 1249,
+        period: '2-5 reviews',
         items: [
           {
             description: 'Proin vel laoreet',
@@ -77,16 +76,15 @@ const metadata = {
         callToAction: {
           target: '_blank',
           text: 'Get started',
-          href: '#',
+          href: '/contact',
         },
         hasRibbon: true,
         ribbonTitle: 'popular',
       },
       {
-        title: 'premium',
-        subtitle: 'Optimal choice for companies',
-        price: 199,
-        period: 'Per Month',
+        title: 'Tier 3',
+        price: 999,
+        period: '6+ reviews',
         items: [
           {
             description: 'Curabitur suscipit risus',
@@ -104,8 +102,10 @@ const metadata = {
         callToAction: {
           target: '_blank',
           text: 'Get started',
-          href: '#',
+          href: '/contact',
         },
+        hasRibbon: true,
+        ribbonTitle: 'Most Popular',
       },
     ]}
   />
@@ -153,7 +153,7 @@ const metadata = {
 
   <!-- Steps Widget ****************** -->
 
-  <Steps
+  <!-- <Steps
     title="A guided journey from plans to creativity"
     tagline="simplified process"
     isReversed={true}
@@ -191,7 +191,7 @@ const metadata = {
       src: 'https://images.unsplash.com/photo-1536816579748-4ecb3f03d72a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80',
       alt: 'Steps image',
     }}
-  />
+  /> -->
 
   <!-- FAQs Widget ******************* -->
 
@@ -231,13 +231,12 @@ const metadata = {
   <!-- CallToAction Widget *********** -->
 
   <CallToAction
-    title="Ready to boost your projects?"
-    subtitle="Join our community of satisfied customers who have transformed their work with our templates."
+    title="Ready to Remove Negative Reviews?"
     actions={[
       {
         variant: 'primary',
         text: 'Get started now',
-        href: '/pricing',
+        href: '/contact',
       },
     ]}
   />

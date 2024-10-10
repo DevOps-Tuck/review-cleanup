@@ -1,5 +1,5 @@
 site:
-  name: REVIEW-CLEANUP
+  name: REVIEW CLEANUP
   site: 'https://astrowind.vercel.app'
   base: '/'
   trailingSlash: false
