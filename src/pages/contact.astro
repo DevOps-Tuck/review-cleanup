@@ -18,8 +18,9 @@ const metadata = {
   id="form"
   title="Drop us a message today!"
   subtitle="For quicker answers, explore our FAQs section. You may find the solution you're looking for right there! If not, our support team is delighted to help you."
-  method="POST"  // Set method to POST
-  action="/.netlify/functions/submission-created" // Link to the Netlify function
+  method="POST" // Keep method as POST
+  data-netlify="true" // Enable Netlify form submission
+  name="ContactUs" // Name of your form
   inputs={[
     {
       type: 'text',
@@ -39,9 +40,8 @@ const metadata = {
     label: 'By submitting this contact form, you acknowledge and agree to the collection of your personal information.',
   }}
   description="Our support team typically responds within 24 business hours."
-  data-netlify="true" // Enable form detection
 >
-  <input type="hidden" name="form-name" value="ContactUs" />  {/* Hidden form name */}
+  <input type="hidden" name="form-name" value="ContactUs" /> {/* Hidden form name */}
 </ContactUs>
 
 
